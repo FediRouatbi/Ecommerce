@@ -1,13 +1,14 @@
 .main {
   padding: 3rem;
   padding-top: 5rem;
+  margin-top: 0.3rem;
+  border-top: 1px solid #aaa;
 }
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   &__section1 {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -17,6 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       img {
         width: 400px;
         border-radius: 10px;
@@ -28,6 +30,9 @@
       display: flex;
       justify-content: space-between;
       img {
+        &:hover {
+          cursor: pointer;
+        }
         border-radius: 10px;
         width: 70px;
       }
@@ -40,41 +45,46 @@
     gap: 1.5rem;
     width: 70%;
     &--header {
+      font-weight: 900;
       text-transform: uppercase;
       color: hsl(26, 100%, 55%);
     }
     &--name {
       text-transform: capitalize;
       font-size: 3rem;
+      color: hsl(220, 13%, 13%);
     }
     &--paragraph {
       opacity: 0.7;
     }
     &--pricing-now {
+      font-weight: 600;
       display: flex;
       align-items: center;
+      gap: 1rem;
       font-size: 2rem;
-      padding-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      color: hsl(220, 13%, 13%);
       span {
         padding: 0.3rem;
         font-size: 1rem;
-        margin-left: 1rem;
         color: hsl(26, 100%, 55%);
         background-color: hsl(25, 100%, 94%);
       }
     }
     &--pricing-before {
-      font-weight: 600;
       opacity: 0.7;
     }
     &--buttons {
+      font-size: 1.5rem;
+      font-weight: 600;
       height: 3rem;
       display: flex;
+      gap: 1rem;
 
       &-numberofitems {
-        padding: 0 0.5rem;
         overflow: hidden;
-        border-radius: 50px;
+        border-radius: 10px;
         flex-grow: 1;
         display: flex;
         button {
@@ -97,10 +107,16 @@
       &-addtocard {
         flex-grow: 1;
         button {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          align-items: center;
+          font-size: 1.3rem;
+          font-weight: 600;
           border: none;
           cursor: pointer;
           background-color: rgba(255, 125, 26, 0.584);
-          border-radius: 8px;
+          border-radius: 10px;
           height: 3rem;
           width: 100%;
         }

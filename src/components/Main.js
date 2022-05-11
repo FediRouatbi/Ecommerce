@@ -8,6 +8,11 @@ import small1 from "../images/image-product-1-thumbnail.jpg";
 import small2 from "../images/image-product-2-thumbnail.jpg";
 import small3 from "../images/image-product-3-thumbnail.jpg";
 import small4 from "../images/image-product-4-thumbnail.jpg";
+import { ReactComponent as Next } from "../images/icon-next.svg";
+import { ReactComponent as Previous } from "../images/icon-previous.svg";
+import { ReactComponent as Minus } from "../images/icon-minus.svg";
+import { ReactComponent as Plus } from "../images/icon-plus.svg";
+import { IoIosCart } from "react-icons/io";
 
 const Main = () => {
   return (
@@ -15,7 +20,7 @@ const Main = () => {
       <div className="grid">
         <div className="try">
           <div className="grid__section1">
-            <div className="grid__section1--image ">
+            <div className="grid__section1--image clicked ">
               <img src={img1} />
             </div>
             <div className="grid__section1--proto">
@@ -43,12 +48,19 @@ const Main = () => {
           </div>
           <div className="grid__section2--buttons">
             <div className="grid__section2--buttons-numberofitems">
-              <button>-</button>
-              <div>3</div>
-              <button>+</button>
+              <button>
+                <Minus />
+              </button>
+              <div>1</div>
+              <button>
+                <Plus />
+              </button>
             </div>
             <div className="grid__section2--buttons-addtocard">
-              <button>Add to cart</button>
+              <button>
+                <IoIosCart />
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

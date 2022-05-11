@@ -2,23 +2,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
   gap: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #aaa;
-
+  position: relative;
   &__links {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 2rem;
+    font-weight: 600;
+
+    &--link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6rem;
+      color: hsl(219, 9%, 45%);
+      text-decoration: none;
+      &:hover {
+        box-shadow: 0 5px 0 hsl(26, 100%, 55%);
+        color: black;
+      }
+    }
+  }
+  &__shop {
+    &--icon {
+      cursor: pointer;
+    }
+    &--icon:hover + &--onhover {
+      display: block;
+    }
+    &--onhover {
+      background-color: #fff;
+      z-index: 3;
+
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      bottom: -8rem;
+      right: 6rem;
+      border-radius: 8px;
+      .cart {
+        padding: 1rem;
+        border-bottom: 1px solid black;
+      }
+    }
+    &--onhover:hover {
+      display: block;
+    }
   }
   &__avatar {
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      outline: 0.2rem solid hsl(26, 100%, 55%);
+    }
     width: 3rem;
     height: 3rem;
   }
 }
+
 .navflex {
   flex-grow: 1;
   display: flex;
@@ -30,4 +72,30 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+.items {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  .item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .trash {
+      cursor: pointer;
+    }
+    img {
+      width: 14%;
+      border-radius: 8px;
+    }
+  }
+}
+@media only screen and (min-width: 600) {
+  .gird {
+    grid-template-columns: 1fr;
+  }
 }
