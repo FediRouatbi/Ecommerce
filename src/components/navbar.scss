@@ -29,24 +29,24 @@
     &--icon {
       cursor: pointer;
     }
-    &--icon:hover + &--onhover {
-      display: block;
-    }
+
     &--onhover {
+      display: none;
+      animation: inout 2s ease-in-out;
       background-color: #fff;
       z-index: 3;
-
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-      position: absolute;
-      bottom: -8rem;
+      position: fixed;
+      top: 4rem;
       right: 6rem;
       border-radius: 8px;
+      transition: all 2s ease-in-out;
       .cart {
         padding: 1rem;
         border-bottom: 1px solid black;
       }
     }
-    &--onhover:hover {
+    &--onhover:hover + &--onhover {
       display: block;
     }
   }
@@ -71,31 +71,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .items {
+  width: 300px;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 1rem;
+
   .item {
     display: flex;
-    justify-content: space-around;
+    gap: 1rem;
     align-items: center;
-
+    color: #aaa;
+    div {
+      padding-top: 0.5rem;
+      strong {
+        color: #000;
+        padding-left: 0.5rem;
+      }
+    }
     .trash {
       cursor: pointer;
     }
     img {
-      width: 14%;
+      width: 3em;
       border-radius: 8px;
     }
   }
+  &__checkout {
+    width: 100%;
+    height: 2rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+  }
 }
-@media only screen and (min-width: 600) {
-  .gird {
-    grid-template-columns: 1fr;
+@keyframes inout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

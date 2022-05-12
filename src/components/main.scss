@@ -1,5 +1,5 @@
 .main {
-  padding: 3rem;
+  padding: 2rem;
   padding-top: 5rem;
   margin-top: 0.3rem;
   border-top: 1px solid #aaa;
@@ -31,7 +31,9 @@
       justify-content: space-between;
       img {
         &:hover {
+          filter: opacity(40%);
           cursor: pointer;
+          outline: 5px solid hsl(26, 100%, 55%);
         }
         border-radius: 10px;
         width: 70px;
@@ -74,6 +76,7 @@
     }
     &--pricing-before {
       opacity: 0.7;
+      text-decoration: line-through;
     }
     &--buttons {
       font-size: 1.5rem;
@@ -128,4 +131,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .gir {
+    grid-template-columns: 1fr;
+  }
 }

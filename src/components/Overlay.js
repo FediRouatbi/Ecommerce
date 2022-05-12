@@ -16,6 +16,8 @@ import {
 } from "react-icons/io";
 import "./overlay.scss";
 const Overlay = () => {
+
+  
   return (
     <div className="image hidden">
       <div className="image__close">

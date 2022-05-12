@@ -1,5 +1,5 @@
 import "./main.scss";
-import React from "react";
+import React, { useContext } from "react";
 import img1 from "../images/image-product-1.jpg";
 import img2 from "../images/image-product-2.jpg";
 import img3 from "../images/image-product-3.jpg";
@@ -13,8 +13,10 @@ import { ReactComponent as Previous } from "../images/icon-previous.svg";
 import { ReactComponent as Minus } from "../images/icon-minus.svg";
 import { ReactComponent as Plus } from "../images/icon-plus.svg";
 import { IoIosCart } from "react-icons/io";
+import { Data } from "../context/ContextProvider";
 
 const Main = () => {
+  const { current, addItem, minusItems, addToCart } = useContext(Data);
   return (
     <main className="main">
       <div className="grid">
@@ -48,16 +50,16 @@ const Main = () => {
           </div>
           <div className="grid__section2--buttons">
             <div className="grid__section2--buttons-numberofitems">
-              <button>
+              <button onClick={() => minusItems()}>
                 <Minus />
               </button>
-              <div>1</div>
-              <button>
+              <div>{current}</div>
+              <button onClick={() => addItem()}>
                 <Plus />
               </button>
             </div>
             <div className="grid__section2--buttons-addtocard">
-              <button>
+              <button onClick={() => addToCart()}>
                 <IoIosCart />
                 Add to cart
               </button>

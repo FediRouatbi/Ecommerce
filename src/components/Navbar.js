@@ -2,9 +2,18 @@ import "./navbar.scss";
 import { ReactComponent as Logo } from "../images/logo.svg";
 import { ReactComponent as MyShop } from "../images/icon-cart.svg";
 import Avatar from "../images/image-avatar.png";
-import { IoMdTrash } from "react-icons/io";
-import small1 from "../images/image-product-1-thumbnail.jpg";
+
+import ShopItems from "./ShopItems";
 const Navbar = () => {
+  const showShop = () => {
+    const shop = document.querySelector(".navbar__shop--onhover");
+    shop.style.display = "block";
+    setTimeout(() => {
+      if (!shop.matches(":hover")) {
+        shop.style.display = "none";
+      }
+    }, 2000);
+  };
   return (
     <nav className="navbar">
       <div className="navbar__logo">
@@ -33,24 +42,12 @@ const Navbar = () => {
         </div>
         <div className="navicons">
           <div className="navbar__shop">
-            <MyShop className="navbar__shop--icon" />
-            <div className="navbar__shop--onhover">
-              <p className="cart">Cart</p>
-              <div className="items">
-                <div className="item">
-                  <img src={small1}></img>
-                  <p>
-                    Fall Limeted Edition Sneakers
-                    <div>
-                      $125.00 x 3 <em>$375.00</em>
-                    </div>
-                  </p>
-                  <IoMdTrash size={20} className="trash" />
-                </div>
-              </div>
-            </div>
+            <MyShop
+              className="navbar__shop--icon"
+              onMouseEnter={() => showShop()}
+            />
+            <ShopItems />
           </div>
-
           <img src={Avatar} className="navbar__avatar" />
         </div>
       </div>
