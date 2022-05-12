@@ -8,9 +8,7 @@ function App() {
     <ContextProvider>
       <Navbar />
       <Main />
-      <div className="overlay hidden">
-        <Overlay />
-      </div>
+      <Overlay />
     </ContextProvider>
   );
 }

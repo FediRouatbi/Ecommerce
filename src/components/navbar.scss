@@ -5,7 +5,9 @@
   padding: 0 1rem;
   gap: 3rem;
   position: relative;
+  height: 6rem;
   &__links {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +15,11 @@
     font-weight: 600;
 
     &--link {
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 6rem;
+
       color: hsl(219, 9%, 45%);
       text-decoration: none;
       &:hover {
@@ -31,8 +34,9 @@
     }
 
     &--onhover {
+      max-height: 20rem;
+      overflow-y: auto;
       display: none;
-      animation: inout 2s ease-in-out;
       background-color: #fff;
       z-index: 3;
       box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
@@ -66,6 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 .navicons {
   display: flex;
@@ -96,6 +101,10 @@
     }
     .trash {
       cursor: pointer;
+      transition: all 0.2s ease-in;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     img {
       width: 3em;
@@ -115,13 +124,5 @@
     font-size: 1rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
-  }
-}
-@keyframes inout {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

@@ -38,6 +38,10 @@
         border-radius: 10px;
         width: 70px;
       }
+      img.active {
+        filter: opacity(40%);
+        outline: 5px solid hsl(26, 100%, 55%);
+      }
     }
   }
   &__section2 {
@@ -135,5 +139,13 @@
 @media only screen and (max-width: 600px) {
   .gir {
     grid-template-columns: 1fr;
+  }
+}
+@keyframes inout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

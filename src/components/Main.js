@@ -1,35 +1,41 @@
 import "./main.scss";
 import React, { useContext } from "react";
-import img1 from "../images/image-product-1.jpg";
-import img2 from "../images/image-product-2.jpg";
-import img3 from "../images/image-product-3.jpg";
-import img4 from "../images/image-product-4.jpg";
 import small1 from "../images/image-product-1-thumbnail.jpg";
 import small2 from "../images/image-product-2-thumbnail.jpg";
 import small3 from "../images/image-product-3-thumbnail.jpg";
 import small4 from "../images/image-product-4-thumbnail.jpg";
-import { ReactComponent as Next } from "../images/icon-next.svg";
-import { ReactComponent as Previous } from "../images/icon-previous.svg";
+
 import { ReactComponent as Minus } from "../images/icon-minus.svg";
 import { ReactComponent as Plus } from "../images/icon-plus.svg";
 import { IoIosCart } from "react-icons/io";
 import { Data } from "../context/ContextProvider";
 
 const Main = () => {
-  const { current, addItem, minusItems, addToCart } = useContext(Data);
+  const {
+    current,
+    addItem,
+    minusItems,
+    addToCart,
+    currentImage,
+    chnageTo,
+    viewOverlay,
+  } = useContext(Data);
   return (
     <main className="main">
       <div className="grid">
         <div className="try">
           <div className="grid__section1">
             <div className="grid__section1--image clicked ">
-              <img src={img1} />
+              <img
+                onClick={() => viewOverlay()}
+                src={require(`../images/image-product-${currentImage}.jpg`)}
+              />
             </div>
-            <div className="grid__section1--proto">
-              <img src={small1} />
-              <img src={small2} />
-              <img src={small3} />
-              <img src={small4} />
+            <div className="grid__section1--proto" onClick={(e) => chnageTo(e)}>
+              <img src={small1} id={1} className="active" />
+              <img src={small2} id={2} />
+              <img src={small3} id={3} />
+              <img src={small4} id={4} />
             </div>
           </div>
         </div>
