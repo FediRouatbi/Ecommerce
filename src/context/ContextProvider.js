@@ -29,6 +29,14 @@ const ContextProvider = ({ children }) => {
     };
     setCart((prev) => [...prev, newItem]);
   };
+  const next = () => {
+    if (currentImage === 4) setCurrentImage(1);
+    setCurrentImage((prev) => prev + 1);
+  };
+  const prev = () => {
+    if (currentImage === 1) setCurrentImage(4);
+    setCurrentImage((prev) => prev - 1);
+  };
   const chnageTo = (e) => {
     for (let i of e.currentTarget.children) i.classList.remove("active");
     if (e.target === e.currentTarget) return;
@@ -59,6 +67,8 @@ const ContextProvider = ({ children }) => {
         chnageTo,
         viewOverlay,
         closeOverlay,
+        next,
+        prev,
       }}
     >
       {children}

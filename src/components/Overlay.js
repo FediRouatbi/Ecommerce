@@ -17,7 +17,7 @@ import "./overlay.scss";
 import { Data } from "../context/ContextProvider";
 
 const Overlay = () => {
-  const { closeOverlay } = useContext(Data);
+  const { closeOverlay, currentImage, next, prev, chnageTo } = useContext(Data);
   return (
     <div className="overlay hidden" onClick={(e) => closeOverlay(e)}>
       <div className="image hidden">
@@ -30,21 +30,24 @@ const Overlay = () => {
         </div>
 
         <div className="relativ">
-          <img src={img1} className="bigimage" />
+          <img
+            src={require(`../images/image-product-${currentImage}.jpg`)}
+            className="bigimage"
+          />
 
-          <div className="next">
+          <div className="next" onClick={() => next()}>
             <IoIosArrowForward size={30} />
           </div>
-          <div className="previous">
+          <div className="previous" onClick={() => prev()}>
             <IoIosArrowBack size={30} />
           </div>
         </div>
 
-        <div className="pics">
-          <img src={small1} />
-          <img src={small2} />
-          <img src={small3} />
-          <img src={small4} />
+        <div className="pics" onClick={(e) => chnageTo(e)}>
+          <img src={small1} id={1} />
+          <img src={small2} id={2} />
+          <img src={small3} id={3} />
+          <img src={small4} id={4} />
         </div>
       </div>
     </div>
