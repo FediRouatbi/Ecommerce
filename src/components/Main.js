@@ -49,18 +49,18 @@ const Main = () => {
           </p>
           <div className="grid__section2--pricing">
             <div className="grid__section2--pricing-now">
-              $125.00
+              <div>$125.00</div>
               <span className="grid__section2--pricing-now-discount">50%</span>
             </div>
             <div className="grid__section2--pricing-before">$250.00</div>
           </div>
           <div className="grid__section2--buttons">
             <div className="grid__section2--buttons-numberofitems">
-              <button onClick={() => minusItems()}>
+              <button className="minus" onClick={() => minusItems()}>
                 <Minus />
               </button>
               <div>{current}</div>
-              <button onClick={() => addItem()}>
+              <button className="plus" onClick={() => addItem()}>
                 <Plus />
               </button>
             </div>

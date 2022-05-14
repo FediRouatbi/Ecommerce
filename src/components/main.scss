@@ -69,7 +69,7 @@
       align-items: center;
       gap: 1rem;
       font-size: 2rem;
-      padding-bottom: 0.5rem;
+
       color: hsl(220, 13%, 13%);
       span {
         padding: 0.3rem;
@@ -85,17 +85,28 @@
     &--buttons {
       font-size: 1.5rem;
       font-weight: 600;
-      height: 3rem;
       display: flex;
       gap: 1rem;
-
+      button {
+        transition: all 0.2s ease;
+        &:hover {
+          filter: invert(300);
+        }
+      }
       &-numberofitems {
-        overflow: hidden;
-        border-radius: 10px;
+        height: 3rem;
+
         flex-grow: 1;
         display: flex;
         button {
+          &.minus {
+            border-radius: 8px 0 0 8px;
+          }
+          &.plus {
+            border-radius: 0 8px 8px 0;
+          }
           border: none;
+          outline: none;
           cursor: pointer;
         }
         div {

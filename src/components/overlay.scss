@@ -34,9 +34,13 @@
 }
 .pics {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 .pics img {
   width: 80px;

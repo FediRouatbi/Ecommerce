@@ -31,16 +31,18 @@ const ContextProvider = ({ children }) => {
   };
   const next = () => {
     if (currentImage === 4) setCurrentImage(1);
+
     setCurrentImage((prev) => prev + 1);
   };
   const prev = () => {
     if (currentImage === 1) setCurrentImage(4);
     setCurrentImage((prev) => prev - 1);
   };
+  console.log(typeof currentImage);
   const chnageTo = (e) => {
     for (let i of e.currentTarget.children) i.classList.remove("active");
     if (e.target === e.currentTarget) return;
-    setCurrentImage(e.target.id);
+    setCurrentImage(+e.target.id);
 
     e.target.classList.add("active");
   };

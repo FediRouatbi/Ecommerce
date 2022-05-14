@@ -1,0 +1,16 @@
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid__section2 {
+    width: 100%;
+  }
+  .grid__section2--buttons {
+    flex-direction: column;
+  }
+  .grid__section2--pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
