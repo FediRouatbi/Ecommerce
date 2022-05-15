@@ -54,7 +54,7 @@ const Navbar = () => {
             </span>
             <ShopItems />
           </div>
-          <img src={Avatar} className="navbar__avatar" />
+          <img src={Avatar} className="navbar__avatar" alt="" />
         </div>
       </div>
     </nav>

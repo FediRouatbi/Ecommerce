@@ -26,6 +26,7 @@ const Main = () => {
               <img
                 onClick={() => viewOverlay()}
                 src={require(`../images/image-product-${currentImage}.jpg`)}
+                alt=""
               />
             </div>
             <div className="grid__section1--proto" onClick={(e) => chnageTo(e)}>

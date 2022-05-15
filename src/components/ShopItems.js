@@ -19,7 +19,7 @@ const ShopItems = () => {
           cart.map((el) => {
             return (
               <div className="item" key={el.id} id={el.id}>
-                <img src={small1}></img>
+                <img src={small1} alt=""></img>
                 <p>
                   Fall Limeted Edition Sneakers
                   <div>
