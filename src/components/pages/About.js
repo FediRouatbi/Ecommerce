@@ -9,10 +9,10 @@ const About = () => {
         displaying my front end knowledge
       </div>
       <div className="about__icons">
-        <a href="https://github.com/FediRouatbi" target="_blank">
+        <a href="https://github.com/FediRouatbi" target="_blank" rel="noreferrer">
           <FaGithub size={40} className="about__icons--icon" />
         </a>
-        <a href="https://www.facebook.com/xCHIVASx/" target="_blank">
+        <a href="https://www.facebook.com/xCHIVASx/" target="_blank" rel="noreferrer">
           <FaFacebook size={40} className="about__icons--icon" />
         </a>
       </div>
