@@ -6,6 +6,7 @@ const ContextProvider = ({ children }) => {
   const [current, setCurrent] = useState(1);
   const [cart, setCart] = useState([]);
   const [currentImage, setCurrentImage] = useState(1);
+  
 
   const addItem = () => {
     setCurrent((prev) => prev + 1);

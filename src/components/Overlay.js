@@ -1,18 +1,6 @@
 import React, { useContext } from "react";
-import small1 from "../images/image-product-1-thumbnail.jpg";
-import small2 from "../images/image-product-2-thumbnail.jpg";
-import small3 from "../images/image-product-3-thumbnail.jpg";
-import small4 from "../images/image-product-4-thumbnail.jpg";
-import img1 from "../images/image-product-1.jpg";
-import img2 from "../images/image-product-2.jpg";
-import img3 from "../images/image-product-3.jpg";
-import img4 from "../images/image-product-4.jpg";
-import {
-  IoMdClose,
-  IoIosArrowForward,
-  IoIosArrowBack,
-  IoIosCart,
-} from "react-icons/io";
+import Images from "./Images";
+import { IoMdClose, IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "./overlay.scss";
 import { Data } from "../context/ContextProvider";
 
@@ -44,10 +32,7 @@ const Overlay = () => {
         </div>
 
         <div className="pics" onClick={(e) => chnageTo(e)}>
-          <img src={small1} id={1} />
-          <img src={small2} id={2} />
-          <img src={small3} id={3} />
-          <img src={small4} id={4} />
+          <Images />
         </div>
       </div>
     </div>

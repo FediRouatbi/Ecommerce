@@ -29,13 +29,40 @@
     }
   }
   &__shop {
+    position: relative;
     &--icon {
       cursor: pointer;
-    }
+      transition: all 0.2s ease;
 
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &--itemsnumber {
+      &:empty {
+        display: none;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-color: hsl(26, 100%, 55%);
+      border-radius: 50%;
+      position: absolute;
+
+      top: -12px;
+      right: -12px;
+      font-size: 13px;
+
+      width: 20px;
+      height: 20px;
+    }
     &--onhover {
       max-height: 20rem;
       overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       display: none;
       background-color: #fff;
       z-index: 3;
