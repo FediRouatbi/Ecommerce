@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import "./contact.scss";
 const contact = () => {
   return (
-    <div>contact</div>
-  )
-}
+    <div className="container">
+      <div className="contact__text">contact</div>
+    </div>
+  );
+};
 
-export default contact
+export default contact;

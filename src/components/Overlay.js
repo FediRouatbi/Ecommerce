@@ -22,6 +22,7 @@ const Overlay = () => {
             src={require(`../images/image-product-${currentImage}.jpg`)}
             className="bigimage"
             alt=""
+            loading="lazy"
           />
 
           <div className="next" onClick={() => next()}>

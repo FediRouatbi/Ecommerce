@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  line-height: 1.5;
+}
+.about__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  font-size: 2rem;
+}
+.about__icons {
+  display: flex;
+  gap: 2rem;
+  &--icon {
+    color: black;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+}

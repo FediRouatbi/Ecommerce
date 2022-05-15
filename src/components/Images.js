@@ -6,10 +6,10 @@ import small4 from "../images/image-product-4-thumbnail.jpg";
 const Images = () => {
   return (
     <>
-      <img src={small1} id={1} className="active" alt="" />
-      <img src={small2} id={2} alt="" />
-      <img src={small3} id={3} alt="" />
-      <img src={small4} id={4} alt="" />
+      <img src={small1} id={1} className="active" alt="" loading="lazy" />
+      <img src={small2} id={2} alt="" loading="lazy" />
+      <img src={small3} id={3} alt="" loading="lazy" />
+      <img src={small4} id={4} alt="" loading="lazy" />
     </>
   );
 };
